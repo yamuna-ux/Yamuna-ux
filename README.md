@@ -246,6 +246,8 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
 ---
 
+---
+
 <!-- ===================== GITHUB PROFILE ===================== -->
 
 ## ✦ GitHub Overview
