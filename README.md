@@ -160,19 +160,20 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
 <a href="https://github.com/yamuna-ux">
   <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=yamuna-ux&theme=default&bg_color=EEF2FF&title_color=7C3AED&text_color=334155&icon_color=06B6D4&border_color=C4B5FD&animation=load&duration=3"
+    src="https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&include_all_commits=true&rank_icon=github&theme=default&bg_color=EEF2FF&title_color=7C3AED&text_color=334155&icon_color=06B6D4&border_color=C4B5FD&hide_border=false"
     height="175"
   />
 </a>
 
 <a href="https://github.com/yamuna-ux">
   <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=yamuna-ux&theme=default&bg_color=FDF4FF&title_color=EC4899&text_color=334155&icon_color=06B6D4&border_color=F0ABFC&animation=load&duration=3"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&langs_count=8&theme=default&bg_color=FDF4FF&title_color=EC4899&text_color=334155&icon_color=06B6D4&border_color=F0ABFC&hide_border=false"
     height="175"
   />
 </a>
 
 </p>
+
 ---
 
 <!-- ===================== CONTRIBUTION SECTION ===================== -->
@@ -195,19 +196,19 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
 <td width="62%" valign="top">
 
-<!-- ===================== CONTRIBUTION ACTIVITY ===================== -->
-
 ## 📈 Contribution Activity
 
 <p align="center">
-
-<img
-  src="https://github.com/yamuna-ux/Yamuna-ux/raw/output/contribution-activity.svg"
-  width="100%"
-  alt="Yamuna Oli Contribution Activity"
-/>
-
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=yamuna-ux&bg_color=ffffff&color=7c3aed&line=06b6d4&point=ec4899&area=true&area_color=e0e7ff&hide_border=false&border_color=c4b5fd&radius=12&custom_title=Yamuna%20Oli%20%E2%80%94%20Contribution%20Activity"
+    width="100%"
+  />
 </p>
+
+</td>
+
+</tr>
+</table>
 
 <p align="center">
   <i>Every contribution represents another step forward.</i>
