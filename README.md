@@ -1,469 +1,238 @@
-<!-- ========================= -->
-<!--        HEADER             -->
-<!-- ========================= -->
+<!-- ===================== ANIMATED HEADER ===================== -->
 
 <p align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:8B5CF6,100:06B6D4&height=220&section=header&text=Hi%2C%20I'm%20Yamuna%20Oli&fontSize=42&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38"
-    width="100%"
-  />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=260&section=header&text=YAMUNA%20OLI&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Java%20Full%20Stack%20Developer%20%7C%20Software%20Developer&descAlignY=58&descSize=18&color=0:0F172A,35:1E1B4B,70:312E81,100:0F172A" width="100%"/>
+</p>
+
+<!-- Floating animated glow / bubble effect -->
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=8B5CF6&center=true&vCenter=true&width=800&lines=Building+Scalable+Web+Applications;Java+%7C+Spring+Boot+%7C+React+%7C+SQL;Exploring+AI%2C+Cloud+%26+Modern+Software;Turning+Ideas+Into+Real+Software" />
 </p>
 
 <p align="center">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=750&lines=Java+Full+Stack+Developer;Software+%26+Web+Development;Building+Practical+Software+Solutions;Exploring+AI%2C+Cloud+%26+Modern+Technology"
-    alt="Typing SVG"
-  />
+  <img src="https://komarev.com/ghpvc/?username=yamuna-ux&label=PROFILE%20VIEWS&color=8B5CF6&style=for-the-badge" />
+  <img src="https://img.shields.io/github/followers/yamuna-ux?label=FOLLOWERS&style=for-the-badge&color=6366F1" />
+  <img src="https://img.shields.io/github/stars/yamuna-ux?label=STARS&style=for-the-badge&color=7C3AED" />
 </p>
 
-<p align="center">
-  <a href="https://github.com/yamuna-ux">
-    <img src="https://img.shields.io/badge/GitHub-yamuna--ux-7C3AED?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</p>
+<br>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yamuna-ux&label=Profile%20Views&color=8B5CF6&style=for-the-badge" />
-  <img src="https://img.shields.io/github/followers/yamuna-ux?label=Followers&style=for-the-badge&color=06B6D4&logo=github" />
-  <img src="https://img.shields.io/github/stars/yamuna-ux?label=Stars&style=for-the-badge&color=EC4899&logo=github" />
-</p>
+<!-- ===================== INTRO ===================== -->
+
+## ✦ About Me
+
+I'm a **Java Full Stack Developer** focused on building practical, scalable and user-friendly software applications.
+
+I enjoy working across the full development cycle — from designing interfaces and building backend services to working with databases, APIs and modern technologies.
+
+- 💻 Focused on **Java Full Stack & Software Development**
+- ⚡ Building practical projects and experimenting with new technologies
+- 🧠 Interested in **AI, Web Development & Cloud**
+- 🔧 Strong focus on problem solving and continuous learning
+- 🚀 Turning ideas into functional software
 
 ---
 
-<!-- ========================= -->
-<!--        ABOUT              -->
-<!-- ========================= -->
+<!-- ===================== TECH STACK ===================== -->
 
-<h2 align="center">👋 About Me</h2>
-
-<p align="center">
-  I am passionate about building practical, scalable and user-friendly software applications.
-  <br />
-  I enjoy turning ideas into working solutions and continuously improving my programming,
-  <br />
-  problem-solving and software development skills.
-</p>
-
-<p align="center">
-  <b>Java Full Stack Development • Software Engineering • AI • Cloud • Problem Solving</b>
-</p>
-
----
-
-<!-- ========================= -->
-<!--        TECH STACK         -->
-<!-- ========================= -->
-
-<h2 align="center">💻 Tech Stack</h2>
-
-<h3 align="center">Languages</h3>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,python,cpp&theme=light" />
-</p>
-
-<h3 align="center">Frontend</h3>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind&theme=light" />
-</p>
-
-<h3 align="center">Backend & Database</h3>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=spring,mysql,mongodb&theme=light" />
-</p>
-
-<h3 align="center">Cloud & Tools</h3>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=aws,git,github,vscode&theme=light" />
-</p>
-
----
-
-<!-- ========================= -->
-<!--        SKILLS             -->
-<!-- ========================= -->
-
-<h2 align="center">🛠️ Core Skills</h2>
+## ⚡ Tech Stack
 
 <p align="center">
 
-<img src="https://img.shields.io/badge/Java-7C3AED?style=for-the-badge&logo=openjdk&logoColor=white" />
-<img src="https://img.shields.io/badge/Spring%20Boot-16A34A?style=for-the-badge&logo=springboot&logoColor=white" />
-<img src="https://img.shields.io/badge/React-06B6D4?style=for-the-badge&logo=react&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL-2563EB?style=for-the-badge&logo=mysql&logoColor=white" />
-<img src="https://img.shields.io/badge/AWS-EC4899?style=for-the-badge&logo=amazonaws&logoColor=white" />
-
-</p>
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/OOP-8B5CF6?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Data%20Structures-4F46E5?style=for-the-badge" />
-<img src="https://img.shields.io/badge/DBMS-0891B2?style=for-the-badge" />
-<img src="https://img.shields.io/badge/REST%20APIs-14B8A6?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Git%20%26%20GitHub-F97316?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://skillicons.dev/icons?i=java,python,cpp,c,html,css,js,react,tailwind,spring,mysql,mongodb,aws,git,github,vscode&perline=8" />
 
 </p>
 
 ---
 
-<!-- ========================= -->
-<!--        PROJECTS           -->
-<!-- ========================= -->
+<!-- ===================== PROJECTS ===================== -->
 
-<h2 align="center">🚀 Featured Projects</h2>
+## 🚀 Featured Projects
 
-<table align="center">
+<table>
 <tr>
-
 <td width="50%" valign="top">
 
-<h3 align="center">🏠 HomeEco</h3>
+### 🏠 HomeEco
 
-<p align="center">
-A Spring Boot based web application with an integrated frontend structure.
-</p>
+Spring Boot based web application with an integrated frontend architecture.
 
-<p align="center">
-<img src="https://img.shields.io/badge/Java-7C3AED?style=flat-square&logo=openjdk&logoColor=white" />
-<img src="https://img.shields.io/badge/Spring%20Boot-16A34A?style=flat-square&logo=springboot&logoColor=white" />
-<img src="https://img.shields.io/badge/HTML-C2410C?style=flat-square&logo=html5&logoColor=white" />
-<img src="https://img.shields.io/badge/CSS-2563EB?style=flat-square&logo=css3&logoColor=white" />
-</p>
-
-<p align="center">
-<a href="https://github.com/yamuna-ux/Home-Eco">
-<img src="https://img.shields.io/badge/View%20Repository-7C3AED?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-</p>
+**Tech:**  
+`Java` `Spring Boot` `Maven` `HTML` `CSS` `JavaScript`
 
 </td>
 
 <td width="50%" valign="top">
 
-<h3 align="center">🔐 FaceID + Blockchain Verification</h3>
+### 🔐 FaceID + Blockchain Verification
 
-<p align="center">
-A biometric verification system combining face recognition with blockchain-based identity integrity verification.
-</p>
+Biometric verification system combining face recognition with blockchain-based identity integrity verification.
 
-<p align="center">
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Flask-111827?style=flat-square&logo=flask&logoColor=white" />
-<img src="https://img.shields.io/badge/OpenCV-06B6D4?style=flat-square&logo=opencv&logoColor=white" />
-<img src="https://img.shields.io/badge/InsightFace-8B5CF6?style=flat-square" />
-</p>
-
-<p align="center">
-<a href="https://github.com/yamuna-ux/face-blockchain-verification">
-<img src="https://img.shields.io/badge/View%20Repository-06B6D4?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-</p>
+**Tech:**  
+`Python` `Flask` `OpenCV` `InsightFace` `ONNX Runtime` `Blockchain`
 
 </td>
-
 </tr>
 
 <tr>
-
 <td width="50%" valign="top">
 
-<h3 align="center">🧠 Project Sphere X</h3>
+### 🧠 Project Sphere X
 
-<p align="center">
-An AI-driven project analysis platform designed to analyze software projects and provide meaningful recommendations.
-</p>
+AI-driven project analysis platform designed to analyze software projects and provide intelligent recommendations.
 
-<p align="center">
-<img src="https://img.shields.io/badge/AI-7C3AED?style=flat-square" />
-<img src="https://img.shields.io/badge/Project%20Analysis-8B5CF6?style=flat-square" />
-<img src="https://img.shields.io/badge/Software%20Engineering-06B6D4?style=flat-square" />
-</p>
-
-<p align="center">
-<img src="https://img.shields.io/badge/Coming%20Soon-EC4899?style=for-the-badge" />
-</p>
+**Focus:**  
+`AI` `Project Analysis` `Security` `Testing` `Documentation`
 
 </td>
 
 <td width="50%" valign="top">
 
-<h3 align="center">🎙️ Nova AI Voice Assistant</h3>
+### 🤖 Nova AI Voice Assistant
 
-<p align="center">
-A desktop AI voice assistant designed to interact with users through voice commands and intelligent responses.
-</p>
+AI-powered desktop voice assistant with a modern graphical interface for interacting with applications and AI services.
 
-<p align="center">
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/AI-7C3AED?style=flat-square" />
-<img src="https://img.shields.io/badge/Voice%20Assistant-06B6D4?style=flat-square" />
-</p>
-
-<p align="center">
-<img src="https://img.shields.io/badge/Coming%20Soon-EC4899?style=for-the-badge" />
-</p>
+**Focus:**  
+`Python` `AI` `Voice Assistant` `GUI`
 
 </td>
-
 </tr>
 
 <tr>
-
 <td width="50%" valign="top">
 
-<h3 align="center">🎓 AI Education Chatbot</h3>
+### 🎓 AI Education Chatbot
 
-<p align="center">
-An AI-powered education-focused chatbot designed to provide interactive assistance and learning support.
-</p>
+AI-powered educational chatbot designed to provide interactive assistance and improve the learning experience.
 
-<p align="center">
-<img src="https://img.shields.io/badge/Artificial%20Intelligence-7C3AED?style=flat-square" />
-<img src="https://img.shields.io/badge/Chatbot-06B6D4?style=flat-square" />
-<img src="https://img.shields.io/badge/Education-EC4899?style=flat-square" />
-</p>
-
-<p align="center">
-<img src="https://img.shields.io/badge/Coming%20Soon-EC4899?style=for-the-badge" />
-</p>
+**Focus:**  
+`AI` `Chatbot` `Education` `Software Development`
 
 </td>
 
 <td width="50%" valign="top">
 
-<h3 align="center">🛒 Amazon Clone Website</h3>
+### 🛒 Amazon Clone Website
 
-<p align="center">
-A frontend e-commerce interface inspired by the Amazon shopping experience.
-</p>
+Frontend e-commerce website inspired by the Amazon interface.
 
-<p align="center">
-<img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" />
-<img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" />
-</p>
-
-<p align="center">
-<a href="https://github.com/yamuna-ux/amazon-clone">
-<img src="https://img.shields.io/badge/View%20Repository-EC4899?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-</p>
+**Tech:**  
+`HTML` `CSS`
 
 </td>
-
 </tr>
 </table>
 
 ---
 
-<!-- ========================= -->
-<!--        INTERNSHIP         -->
-<!-- ========================= -->
+<!-- ===================== INTERNSHIP ===================== -->
 
-<h2 align="center">💼 Internship Experience</h2>
+## 💼 Internship Experience
+
+### Full Stack Web Development — Java Spring Boot
+
+**Uttirna Services LLP**
+
+Completed a Full Stack Web Development internship focused on **Java Spring Boot**, gaining practical experience in application development, projects, assignments and software development workflows.
+
+`Java` `Spring Boot` `Web Development` `Backend Development`
+
+---
+
+<!-- ===================== CURRENTLY LEARNING ===================== -->
+
+## 🌱 Currently Exploring
 
 <p align="center">
-  <b>Full Stack Web Development in Java Spring Boot</b>
-</p>
-
-<p align="center">
-  <b>Uttirna Services LLP</b>
-</p>
-
-<p align="center">
-  January 2026 – February 2026
-</p>
-
-<p align="center">
-  Completed a Full Stack Web Development internship focused on
-  Java Spring Boot, gaining practical exposure to application development,
-  projects, assignments and software development workflows.
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=650&lines=Advanced+Spring+Boot;REST+API+Development;React+%26+Modern+Frontend;AWS+%26+Cloud+Technologies;AI+%26+Intelligent+Applications" />
 </p>
 
 ---
 
-<!-- ========================= -->
-<!--      CURRENTLY LEARNING   -->
-<!-- ========================= -->
+<!-- ===================== GITHUB STATS ===================== -->
 
-<h2 align="center">🌱 Currently Exploring</h2>
+## 📊 GitHub Analytics
 
 <p align="center">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=2800&pause=900&color=06B6D4&center=true&vCenter=true&width=700&lines=Advanced+Java+%26+Spring+Boot;React+%26+Modern+Frontend;AWS+%26+Cloud+Technologies;AI+%26+Intelligent+Applications;System+Design+%26+Software+Engineering"
-    alt="Currently Learning"
-  />
+
+<img src="https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github&theme=tokyonight" height="180"/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&hide_border=true&langs_count=8&theme=tokyonight" height="180"/>
+
 </p>
 
 ---
 
-<!-- ========================= -->
-<!--      GITHUB OVERVIEW      -->
-<!-- ========================= -->
+<!-- ===================== STREAK ===================== -->
 
-<h2 align="center">📊 GitHub Overview</h2>
+## 🔥 Contribution Streak
 
 <p align="center">
-  <a href="https://github.com/yamuna-ux">
-    <img src="https://img.shields.io/badge/GitHub-Profile-7C3AED?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://github.com/yamuna-ux?tab=repositories">
-    <img src="https://img.shields.io/badge/Repositories-Explore-06B6D4?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
+  <img src="https://streak-stats.demolab.com?user=yamuna-ux&theme=tokyonight&hide_border=true" width="90%"/>
 </p>
 
 ---
 
-<!-- ========================= -->
-<!--      GITHUB ANALYTICS     -->
-<!-- ========================= -->
+<!-- ===================== CONTRIBUTION ACTIVITY ===================== -->
 
-<h2 align="center">📈 GitHub Analytics</h2>
-
-<table align="center">
-<tr>
-
-<td width="50%" align="center">
-
-<img
-  src="https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&hide_border=true&bg_color=FFFFFF&title_color=7C3AED&text_color=475569&icon_color=06B6D4&border_color=E2E8F0"
-  width="480"
-  alt="GitHub Stats"
-/>
-
-</td>
-
-<td width="50%" align="center">
-
-<img
-  src="https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&hide_border=true&bg_color=FFFFFF&title_color=EC4899&text_color=475569&icon_color=7C3AED&border_color=E2E8F0"
-  width="380"
-  alt="Top Languages"
-/>
-
-</td>
-
-</tr>
-</table>
-
----
-
-<!-- ========================= -->
-<!-- CONTRIBUTION STREAK/GRAPH -->
-<!-- ========================= -->
-
-<h2 align="center">📈 Contribution Journey</h2>
-
-<table align="center">
-<tr>
-
-<td width="43%" align="center">
-
-<h3>🔥 Contribution Streak</h3>
-
-<img
-  src="https://streak-stats.demolab.com/?user=yamuna-ux&theme=default&background=FFFFFF&border=E2E8F0&stroke=E2E8F0&ring=7C3AED&fire=EC4899&currStreakLabel=7C3AED&sideLabels=475569&currStreakNum=7C3AED&sideNums=06B6D4&dates=64748B&hide_border=true"
-  width="390"
-  alt="Contribution Streak"
-/>
-
-</td>
-
-<td width="57%" align="center">
-
-<h3>📊 Contribution Activity</h3>
-
-<img
-  src="https://github-readme-activity-graph.vercel.app/graph?username=yamuna-ux&bg_color=FFFFFF&color=475569&line=7C3AED&point=06B6D4&area_color=DDD6FE&area=true&hide_border=true&custom_title=GitHub%20Contribution%20Activity"
-  width="600"
-  alt="GitHub Contribution Activity"
-/>
-
-</td>
-
-</tr>
-</table>
-
----
-
-<!-- ========================= -->
-<!--      CONTRIBUTION SNAKE    -->
-<!-- ========================= -->
-
-<h2 align="center">🐍 Contribution Journey</h2>
+# 📈 Contribution Activity
 
 <p align="center">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake-dark.svg"
-    />
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake.svg"
-    />
-    <img
-      src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake.svg"
-      width="900"
-      alt="GitHub Contribution Snake Animation"
-    />
-  </picture>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yamuna-ux&bg_color=0d1117&color=8b5cf6&line=6366f1&point=a78bfa&area=true&hide_border=true&custom_title=Yamuna%20Oli%20%E2%80%94%20Contribution%20Activity" width="100%"/>
+</p>
+
+<p align="center">
+  <i>Every contribution represents another step forward.</i>
 </p>
 
 ---
 
-<!-- ========================= -->
-<!--      DEVELOPER PHILOSOPHY -->
-<!-- ========================= -->
+<!-- ===================== SNAKE ===================== -->
 
-<h2 align="center">💡 Developer Philosophy</h2>
+## 🐍 Contribution Journey
 
 <p align="center">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&duration=3500&pause=1200&color=7C3AED&center=true&vCenter=true&width=850&lines=Build+with+purpose.;Learn+by+building.;Solve+real-world+problems.;Write+cleaner+code+every+day.;Keep+learning.+Keep+building."
-    alt="Developer Philosophy"
-  />
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="95%"/>
 </p>
 
 ---
 
-<!-- ========================= -->
-<!--          CONTACT          -->
-<!-- ========================= -->
+<!-- ===================== GITHUB PROFILE ===================== -->
 
-<h2 align="center">🤝 Let's Connect</h2>
+## ✦ GitHub Overview
 
 <p align="center">
-  <a href="https://github.com/yamuna-ux">
-    <img src="https://img.shields.io/badge/GitHub-yamuna--ux-7C3AED?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</p>
 
-<p align="center">
-  <i>Building software • Exploring technology • Solving problems</i>
+<a href="https://github.com/yamuna-ux">
+<img src="https://img.shields.io/badge/GitHub-yamuna--ux-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://www.linkedin.com/">
+<img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
 </p>
 
 ---
 
-<!-- ========================= -->
-<!--           FOOTER          -->
-<!-- ========================= -->
+<!-- ===================== PHILOSOPHY ===================== -->
+
+## 🧩 Developer Philosophy
 
 <p align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:8B5CF6,100:7C3AED&height=120&section=footer"
-    width="100%"
-  />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3500&pause=1200&color=8B5CF6&center=true&vCenter=true&width=800&lines=Learn+%E2%86%92+Build+%E2%86%92+Break+%E2%86%92+Improve;Clean+Code.+Real+Projects.+Continuous+Growth.;Think+%E2%80%A2+Build+%E2%80%A2+Learn+%E2%80%A2+Repeat." />
 </p>
+
+<br>
+
+<p align="center">
+  <b>Thanks for visiting my profile ✦</b>
+</p>
+
+<!-- ===================== ANIMATED FOOTER ===================== -->
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=140&section=footer&color=0:0F172A,35:312E81,70:1E1B4B,100:0F172A&animation=fadeIn" width="100%"/>
+</p>
+This style and this formation, I like it. Just do one thing. Just change the color. I don't want dark. I want lighter combo. And the profile view color, follower, start color, that also change. Make it look attractive and unique. And GitHub analytics, GitHub analytics, images not showing. And contribution strike, make it smaller. Contribution strike, make it smaller, and contribution activity, which is not visible. Why? I don't know. Just check it. And GitHub overview, the color combo is very worse. Black and white, make it colorful yaar. That GitHub overview, and in the top that LinkedIn and GitHub, that button and all, that also make it colorful. Make it little colorful. Don't change anything, just make it colorful. And whatever which is not visible, make it visible in the above code which I have given you. Add animation if you can add.
