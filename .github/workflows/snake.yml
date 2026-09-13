@@ -18,8 +18,8 @@ jobs:
         with:
           github_user_name: yamuna-ux
           outputs: |
-            dist/yamuna-snake.svg?color_snake=7C3AED&color_dots=F1F5F9,DDD6FE,A78BFA,06B6D4,EC4899
-            dist/yamuna-snake-dark.svg?color_snake=EC4899&color_dots=1E1B4B,4338CA,7C3AED,06B6D4,EC4899
+            dist/yamuna-snake.svg?color_snake=06B6D4&color_dots=161B22,164E63,0891B2,06B6D4,EC4899
+            dist/yamuna-snake-dark.svg?color_snake=EC4899&color_dots=161B22,312E81,4338CA,06B6D4,EC4899
 
       - name: Publish snake
         uses: crazy-max/ghaction-github-pages@v4
