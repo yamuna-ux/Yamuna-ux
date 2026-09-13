@@ -226,23 +226,25 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake-dark.svg"
+    srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/yamuna-snake-dark.svg?v=2"
   />
 
   <source
     media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake.svg"
+    srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/yamuna-snake.svg?v=2"
   />
 
   <img
-    src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake.svg"
+    src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/yamuna-snake.svg?v=2"
     width="95%"
-    alt="GitHub contribution snake animation"
+    alt="Yamuna Oli GitHub contribution snake animation"
   />
 
 </picture>
 
 </p>
+
+---
 
 ---
 
