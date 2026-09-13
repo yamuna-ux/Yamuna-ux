@@ -232,7 +232,7 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
   <img
     src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-snake.svg"
     width="95%"
-    alt="Yamuna Oli GitHub contribution snake animation"
+    alt="GitHub contribution snake"
   />
 
 </picture>
