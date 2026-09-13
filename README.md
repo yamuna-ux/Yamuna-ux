@@ -1,19 +1,21 @@
 <!-- ===================== ANIMATED HEADER ===================== -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=260&section=header&text=YAMUNA%20OLI&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Java%20Full%20Stack%20Developer%20%7C%20Software%20Developer&descAlignY=58&descSize=18&color=0:0F172A,35:1E1B4B,70:312E81,100:0F172A" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=260&section=header&text=YAMUNA%20OLI&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Java%20Full%20Stack%20Developer%20%7C%20Software%20Developer&descAlignY=58&descSize=18&color=0:4F46E5,35:7C3AED,70:EC4899,100:06B6D4" width="100%"/>
 </p>
 
-<!-- Floating animated glow / bubble effect -->
+<!-- Animated Introduction -->
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=8B5CF6&center=true&vCenter=true&width=800&lines=Building+Scalable+Web+Applications;Java+%7C+Spring+Boot+%7C+React+%7C+SQL;Exploring+AI%2C+Cloud+%26+Modern+Software;Turning+Ideas+Into+Real+Software" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=7C3AED&center=true&vCenter=true&width=800&lines=Building+Scalable+Web+Applications;Java+%7C+Spring+Boot+%7C+React+%7C+SQL;Exploring+AI%2C+Cloud+%26+Modern+Software;Turning+Ideas+Into+Real+Software" />
 </p>
+
+<!-- Colorful Profile Badges -->
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=yamuna-ux&label=PROFILE%20VIEWS&color=8B5CF6&style=for-the-badge" />
-  <img src="https://img.shields.io/github/followers/yamuna-ux?label=FOLLOWERS&style=for-the-badge&color=6366F1" />
-  <img src="https://img.shields.io/github/stars/yamuna-ux?label=STARS&style=for-the-badge&color=7C3AED" />
+  <img src="https://img.shields.io/github/followers/yamuna-ux?label=FOLLOWERS&style=for-the-badge&color=06B6D4&labelColor=EEF2FF" />
+  <img src="https://img.shields.io/github/stars/yamuna-ux?label=STARS&style=for-the-badge&color=EC4899&labelColor=FDF2F8" />
 </p>
 
 <br>
@@ -145,7 +147,7 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 ## 🌱 Currently Exploring
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=650&lines=Advanced+Spring+Boot;REST+API+Development;React+%26+Modern+Frontend;AWS+%26+Cloud+Technologies;AI+%26+Intelligent+Applications" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1000&color=06B6D4&center=true&vCenter=true&width=650&lines=Advanced+Spring+Boot;REST+API+Development;React+%26+Modern+Frontend;AWS+%26+Cloud+Technologies;AI+%26+Intelligent+Applications" />
 </p>
 
 ---
@@ -156,9 +158,19 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github&theme=tokyonight" height="180"/>
+<a href="https://github.com/yamuna-ux">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&include_all_commits=true&rank_icon=github&theme=default&bg_color=EEF2FF&title_color=7C3AED&text_color=334155&icon_color=06B6D4&border_color=C4B5FD&hide_border=false"
+    height="175"
+  />
+</a>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&hide_border=true&langs_count=8&theme=tokyonight" height="180"/>
+<a href="https://github.com/yamuna-ux">
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&langs_count=8&theme=default&bg_color=FDF4FF&title_color=EC4899&text_color=334155&icon_color=06B6D4&border_color=F0ABFC&hide_border=false"
+    height="175"
+  />
+</a>
 
 </p>
 
@@ -169,17 +181,23 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 ## 🔥 Contribution Streak
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=yamuna-ux&theme=tokyonight&hide_border=true" width="90%"/>
+  <img
+    src="https://streak-stats.demolab.com/?user=yamuna-ux&theme=default&background=FFFFFF&border=C4B5FD&stroke=E9D5FF&ring=7C3AED&fire=EC4899&currStreakLabel=7C3AED&sideLabels=06B6D4&currStreakNum=EC4899&sideNums=06B6D4&dates=64748B"
+    width="650"
+  />
 </p>
 
 ---
 
 <!-- ===================== CONTRIBUTION ACTIVITY ===================== -->
 
-# 📈 Contribution Activity
+## 📈 Contribution Activity
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yamuna-ux&bg_color=0d1117&color=8b5cf6&line=6366f1&point=a78bfa&area=true&hide_border=true&custom_title=Yamuna%20Oli%20%E2%80%94%20Contribution%20Activity" width="100%"/>
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=yamuna-ux&bg_color=ffffff&color=7c3aed&line=06b6d4&point=ec4899&area=true&area_color=e0e7ff&hide_border=false&border_color=c4b5fd&radius=12&custom_title=Yamuna%20Oli%20%E2%80%94%20Contribution%20Activity"
+    width="100%"
+  />
 </p>
 
 <p align="center">
@@ -193,7 +211,25 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 ## 🐍 Contribution Journey
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="95%"/>
+
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake-dark.svg"
+  />
+
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake.svg"
+  />
+
+  <img
+    src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake.svg"
+    width="90%"
+    alt="GitHub contribution snake animation"
+  />
+</picture>
+
 </p>
 
 ---
@@ -205,11 +241,15 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 <p align="center">
 
 <a href="https://github.com/yamuna-ux">
-<img src="https://img.shields.io/badge/GitHub-yamuna--ux-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-Yamuna%20Oli-7C3AED?style=for-the-badge&logo=github&logoColor=white&labelColor=4F46E5"/>
 </a>
 
 <a href="https://www.linkedin.com/">
-<img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-06B6D4?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0891B2"/>
+</a>
+
+<a href="https://github.com/yamuna-ux?tab=repositories">
+  <img src="https://img.shields.io/badge/Projects-Explore-EC4899?style=for-the-badge&logo=github&logoColor=white&labelColor=DB2777"/>
 </a>
 
 </p>
@@ -221,7 +261,7 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 ## 🧩 Developer Philosophy
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3500&pause=1200&color=8B5CF6&center=true&vCenter=true&width=800&lines=Learn+%E2%86%92+Build+%E2%86%92+Break+%E2%86%92+Improve;Clean+Code.+Real+Projects.+Continuous+Growth.;Think+%E2%80%A2+Build+%E2%80%A2+Learn+%E2%80%A2+Repeat." />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3500&pause=1200&color=7C3AED&center=true&vCenter=true&width=800&lines=Learn+%E2%86%92+Build+%E2%86%92+Break+%E2%86%92+Improve;Clean+Code.+Real+Projects.+Continuous+Growth.;Think+%E2%80%A2+Build+%E2%80%A2+Learn+%E2%80%A2+Repeat." />
 </p>
 
 <br>
@@ -233,5 +273,5 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 <!-- ===================== ANIMATED FOOTER ===================== -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=140&section=footer&color=0:0F172A,35:312E81,70:1E1B4B,100:0F172A&animation=fadeIn" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=140&section=footer&color=0:06B6D4,35:4F46E5,70:7C3AED,100:EC4899&animation=fadeIn" width="100%"/>
 </p>
