@@ -1,21 +1,25 @@
 # 👋 Hi, I'm Yamuna Oli
 
-### 💻 Java Full Stack Developer | Software & Web Development
+### Java Full Stack Developer | Software & Web Development
 
-I build practical software and web applications using Java, Spring Boot, React, SQL, and modern development tools.
+I’m a passionate software developer focused on building practical, scalable, and user-friendly applications.
 
-I enjoy turning ideas into working applications, solving programming problems, and continuously improving my full-stack development skills.
-
----
-
-## 🌐 Connect With Me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yamuna-oli-bb8981309/)
-[![GitHub](https://img.shields.io/badge/GitHub-yamuna--ux-black?style=for-the-badge&logo=github)](https://github.com/yamuna-ux)
+My primary focus is **Java Full Stack Development**, with experience and hands-on practice in Java, Spring Boot, React, SQL, REST APIs, and modern web technologies. I enjoy turning ideas into working software and continuously improving my problem-solving and development skills.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 About Me
+
+- 💻 Focused on **Java Full Stack Development**
+- 🌱 Currently strengthening **Java, Spring Boot, React & SQL**
+- 🔧 Interested in building **real-world software applications**
+- 🧠 Improving **Data Structures, OOP & problem-solving**
+- ☁️ Exploring **AWS and cloud technologies**
+- 🚀 Passionate about learning, building and experimenting with new technologies
+
+---
+
+## 🛠️ Technical Skills
 
 ### 💻 Programming
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -30,15 +34,14 @@ I enjoy turning ideas into working applications, solving programming problems, a
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ### ⚙️ Backend
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![REST API](https://img.shields.io/badge/REST_API-02569B?style=for-the-badge)
+![REST API](https://img.shields.io/badge/REST_APIs-02569B?style=for-the-badge)
 
-### 🗄️ Database
+### 🗄️ Databases
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
-### ☁️ Cloud & Tools
+### ☁️ Cloud & Development Tools
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
@@ -46,94 +49,107 @@ I enjoy turning ideas into working applications, solving programming problems, a
 
 ---
 
-## 🚀 Featured Projects
-
-### 🏠 HomeEco
-Spring Boot-based web application with the frontend integrated into the backend.
-
-**Tech:** Java • Spring Boot • HTML • CSS • JavaScript • Maven
-
----
-
-### 🔐 FaceID + Blockchain Verification
-Biometric verification system combining face recognition with blockchain-based identity integrity verification.
-
-**Tech:** Python • Flask • OpenCV • InsightFace • ONNX Runtime
-
----
-
-### 🤖 Project Sphere X
-AI-driven project analysis platform designed to analyze software projects and provide useful insights and recommendations.
-
----
-
-### 🎙️ Nova AI Voice Assistant
-AI-powered voice assistant designed to interact with users and perform application-related tasks.
-
----
-
-### 🛒 Amazon Clone Website
-Frontend web project inspired by the Amazon shopping interface.
-
-**Tech:** HTML • CSS
-
----
-
-### 🎓 AI Education Chatbot
-AI-based education chatbot focused on creating an interactive learning experience.
-
----
-
-### 🏛️ CivicSense
-Software project focused on solving practical civic and community-related problems through technology.
-
----
-
-## 💼 Internship Experience
+# 💼 Internship Experience
 
 ### Full Stack Web Development in Java Spring Boot
 
-**Uttirna Services LLP**
-
+**Uttirna Services LLP**  
 📅 January 2026 – February 2026
 
-Gained practical experience in Java Spring Boot, full-stack web development, application development, projects, assignments, and software development workflows.
+Gained practical experience in Java Spring Boot and full-stack web development through application development, projects, assignments, and software development workflows.
 
 ---
 
-## 📊 GitHub Statistics
+# 🚀 Featured Projects
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&theme=tokyonight&hide_border=true)
+## 🏠 HomeEco
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&theme=tokyonight&hide_border=true)
+A Spring Boot-based web application with the frontend integrated into the backend.
 
----
+**Tech Stack**
 
-## 🔥 GitHub Streak
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=yamuna-ux&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
+`Java` `Spring Boot` `HTML` `CSS` `JavaScript` `Maven`
 
 ---
 
-## 📈 Contribution Activity
+## 🔐 FaceID + Blockchain Verification
 
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=yamuna-ux&theme=tokyo-night&hide_border=true)
+A biometric verification system combining face recognition with blockchain-based identity integrity verification.
+
+**Tech Stack**
+
+`Python` `Flask` `OpenCV` `InsightFace` `ONNX Runtime`
 
 ---
 
-## 🎯 Currently Focusing On
+## 🤖 Project Sphere X
+
+An AI-driven project analysis platform designed to analyze software projects and provide useful insights and recommendations.
+
+The concept focuses on analyzing an uploaded software project and helping identify areas such as architecture, security, testing, documentation, and potential improvements.
+
+---
+
+## 🎙️ Nova AI Voice Assistant
+
+An AI-powered voice assistant designed to interact with users and perform application-related tasks through voice-based interaction.
+
+---
+
+## 🎓 AI Education Chatbot
+
+An AI-based education chatbot designed to provide an interactive and accessible learning experience.
+
+---
+
+## 🛒 Amazon Clone Website
+
+A frontend web project inspired by the Amazon shopping interface.
+
+**Tech Stack**
+
+`HTML` `CSS`
+
+---
+
+# 📊 GitHub Analytics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&theme=tokyonight&hide_border=true" height="170"/>
+</p>
+
+---
+
+# 🔥 GitHub Streak
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=yamuna-ux&theme=tokyonight&hide_border=true"/>
+</p>
+
+---
+
+# 📈 Contribution Graph
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yamuna-ux&theme=tokyo-night&hide_border=true"/>
+</p>
+
+---
+
+# 🎯 Current Focus
 
 ```text
 Java
-  ↓
+   ↓
 Spring Boot
-  ↓
+   ↓
 REST APIs
-  ↓
+   ↓
 React
-  ↓
+   ↓
 SQL & Databases
-  ↓
+   ↓
 AWS
-  ↓
+   ↓
 Full Stack Development
