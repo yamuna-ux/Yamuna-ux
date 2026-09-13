@@ -1,146 +1,110 @@
 <!-- ========================================================= -->
-<!--                     HERO BANNER                           -->
+<!--                     YAMUNA OLI                            -->
+<!--                 JAVA FULL STACK DEVELOPER                 -->
 <!-- ========================================================= -->
 
-<div align="center">
+<p align="center">
+  <img src="./assets/hero-banner.png" width="100%" alt="Yamuna Oli - Java Full Stack Developer"/>
+</p>
 
-<img src="./assets/hero-banner.png" width="100%" alt="Yamuna Oli - Java Full Stack Developer"/>
+<br>
 
-<br><br>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=2800&pause=900&color=8B5CF6&center=true&vCenter=true&width=800&lines=Building+Scalable+Software;Java+%7C+Spring+Boot+%7C+React+%7C+SQL;Exploring+AI+%7C+Cloud+%7C+Modern+Development;Turning+Ideas+Into+Real+Software" />
+</p>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=2800&pause=900&color=8B5CF6&center=true&vCenter=true&width=750&lines=Building+Scalable+Software;Java+%7C+Spring+Boot+%7C+React+%7C+SQL;Turning+Ideas+Into+Practical+Applications;Exploring+AI+%7C+Cloud+%7C+Modern+Web+Development" />
-
-<br><br>
+<p align="center">
 
 <a href="https://github.com/yamuna-ux">
-<img src="https://img.shields.io/badge/GitHub-yamuna--ux-0D1117?style=for-the-badge&logo=github&logoColor=ffffff"/>
+  <img src="https://img.shields.io/badge/GitHub-yamuna--ux-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 
 <a href="https://www.linkedin.com/">
-<img src="https://img.shields.io/badge/LinkedIn-Connect-0D1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2"/>
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0D1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2"/>
 </a>
 
-</div>
+</p>
 
 <br>
 
 ---
 
-<!-- ========================================================= -->
-<!--                     ABOUT                                  -->
-<!-- ========================================================= -->
+# ✦ About Me
 
-## ✦ About Me
+I'm a **Java Full Stack Developer** focused on building practical, scalable and user-friendly software applications.
 
-I’m a **Java Full Stack Developer** focused on building practical, scalable and user-friendly software applications.
+I enjoy transforming ideas into working products while continuously improving my skills across **backend development, frontend development, databases, APIs, cloud technologies and AI-powered applications.**
 
-I enjoy turning ideas into working products and continuously improving my skills across **backend development, frontend development, databases, APIs, cloud technologies and AI-powered applications.**
+<br>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=4&section=header&color=0:3B82F6,50:8B5CF6,100:EC4899" width="65%"/>
+</p>
 
 <br>
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&height=4&section=header&color=0:3B82F6,50:8B5CF6,100:EC4899" width="70%"/>
+`BUILD` &nbsp;•&nbsp; `LEARN` &nbsp;•&nbsp; `EXPERIMENT` &nbsp;•&nbsp; `IMPROVE`
 
 </div>
 
-<br>
-
 ---
 
-<!-- ========================================================= -->
-<!--                     TECH STACK                             -->
-<!-- ========================================================= -->
+# ⚡ Tech Stack
 
-## ⚡ Tech Stack
+<p align="center">
 
-<div align="center">
-
-### Languages
-
-<img src="https://skillicons.dev/icons?i=java,python,cpp,c,js&theme=dark"/>
+<img src="https://skillicons.dev/icons?i=java,python,cpp,c,js&theme=dark" />
 
 <br><br>
 
-### Frontend
-
-<img src="https://skillicons.dev/icons?i=html,css,react,tailwind&theme=dark"/>
+<img src="https://skillicons.dev/icons?i=html,css,react,tailwind&theme=dark" />
 
 <br><br>
 
-### Backend & Database
-
-<img src="https://skillicons.dev/icons?i=spring,mysql,mongodb&theme=dark"/>
+<img src="https://skillicons.dev/icons?i=spring,mysql,mongodb&theme=dark" />
 
 <br><br>
 
-### Cloud & Tools
+<img src="https://skillicons.dev/icons?i=aws,git,github,vscode,docker&theme=dark" />
 
-<img src="https://skillicons.dev/icons?i=aws,git,github,vscode,docker&theme=dark"/>
-
-</div>
-
-<br>
+</p>
 
 ---
 
-<!-- ========================================================= -->
-<!--                     DEVELOPMENT FOCUS                      -->
-<!-- ========================================================= -->
-
-## ◈ Development Focus
-
-<div align="center">
-
-| Area | Technologies |
-|:---|:---|
-| **Backend** | Java • Spring Boot • REST APIs |
-| **Frontend** | React • JavaScript • HTML • CSS |
-| **Database** | MySQL • SQL • MongoDB |
-| **Cloud** | AWS |
-| **Tools** | Git • GitHub • Docker • VS Code |
-| **Exploring** | AI • LLMs • Intelligent Applications |
-
-</div>
-
-<br>
-
----
-
-<!-- ========================================================= -->
-<!--                     FEATURED PROJECTS                       -->
-<!-- ========================================================= -->
-
-## 🚀 Featured Projects
+# 🚀 Featured Projects
 
 <table>
 <tr>
 
 <td width="50%" valign="top">
 
-### 🏠 HomeEco
+## 🏠 HomeEco
 
-**Spring Boot based full-stack web application**
+**Spring Boot based web application**
 
-**Stack**
+A Java Spring Boot application with an integrated frontend architecture.
 
-`Java` `Spring Boot` `Maven` `HTML` `CSS` `JavaScript`
+**Tech Stack**
 
-Frontend integrated with the Spring Boot backend using a structured application architecture.
+`Java` `Spring Boot` `Maven`  
+`HTML` `CSS` `JavaScript`
 
 </td>
 
 <td width="50%" valign="top">
 
-### 🔐 FaceID + Blockchain Verification
+## 🔐 FaceID + Blockchain Verification
 
-**Biometric verification with blockchain-based identity integrity**
+**Biometric identity verification system**
 
-**Stack**
+Combines face recognition with blockchain-based identity integrity verification.
 
-`Python` `Flask` `OpenCV` `InsightFace` `ONNX Runtime`
+**Tech Stack**
 
-Combines biometric face verification with blockchain-based identity integrity verification.
+`Python` `Flask` `OpenCV`  
+`InsightFace` `ONNX Runtime` `Blockchain`
 
 </td>
 
@@ -150,29 +114,30 @@ Combines biometric face verification with blockchain-based identity integrity ve
 
 <td width="50%" valign="top">
 
-### 🧠 Project Sphere X
+## 🧠 Project Sphere X
 
-**AI-driven software project analysis platform**
+**AI-driven project analysis platform**
 
-Analyzes uploaded software projects and provides structured insights and recommendations.
+Designed to analyze software projects and provide structured insights and intelligent recommendations.
 
 **Focus**
 
-`Project Analysis` `Architecture` `Security` `Testing` `Documentation` `AI Recommendations`
+`AI` `Project Analysis`  
+`Security` `Testing` `Documentation`
 
 </td>
 
 <td width="50%" valign="top">
 
-### 🤖 Nova AI Voice Assistant
+## 🤖 Nova AI Voice Assistant
 
 **AI-powered desktop voice assistant**
 
-A Python-based desktop assistant combining voice interaction, AI responses and a modern GUI.
+A Python-based assistant with voice interaction, AI responses and a modern graphical interface.
 
 **Focus**
 
-`Python` `Voice AI` `AI Integration` `Desktop GUI`
+`Python` `AI` `Voice` `GUI`
 
 </td>
 
@@ -182,27 +147,27 @@ A Python-based desktop assistant combining voice interaction, AI responses and a
 
 <td width="50%" valign="top">
 
-### 🎓 AI Education Chatbot
+## 🎓 AI Education Chatbot
 
-**AI-powered educational assistance platform**
+**AI-powered educational assistant**
 
-An interactive conversational AI project designed to support users with educational assistance.
+An interactive chatbot designed to provide conversational educational assistance.
 
 **Focus**
 
-`AI` `Chatbot` `Conversational AI`
+`AI` `Chatbot` `Education`
 
 </td>
 
 <td width="50%" valign="top">
 
-### 🛒 Amazon Clone Website
+## 🛒 Amazon Clone Website
 
-**Frontend e-commerce clone**
+**Frontend e-commerce website**
 
-A frontend implementation inspired by an e-commerce shopping interface.
+A frontend project inspired by a modern e-commerce shopping interface.
 
-**Stack**
+**Tech Stack**
 
 `HTML` `CSS`
 
@@ -211,15 +176,9 @@ A frontend implementation inspired by an e-commerce shopping interface.
 </tr>
 </table>
 
-<br>
-
 ---
 
-<!-- ========================================================= -->
-<!--                     INTERNSHIP                             -->
-<!-- ========================================================= -->
-
-## 💼 Internship Experience
+# 💼 Internship
 
 ### Full Stack Web Development — Java Spring Boot
 
@@ -229,105 +188,85 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
 <br>
 
----
-
-<!-- ========================================================= -->
-<!--                     GITHUB ANALYTICS                       -->
-<!-- ========================================================= -->
-
-## 📊 GitHub Analytics
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&hide_border=true&bg_color=0D1117&title_color=8B5CF6&icon_color=3B82F6&text_color=C9D1D9&ring_color=8B5CF6&include_all_commits=true" height="180"/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&hide_border=true&bg_color=0D1117&title_color=8B5CF6&text_color=C9D1D9&langs_count=8" height="180"/>
-
-</div>
-
-<br>
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=yamuna-ux&theme=dark&hide_border=true&background=0D1117&ring=8B5CF6&fire=3B82F6&currStreakLabel=8B5CF6&sideLabels=C9D1D9&dates=64748B" width="70%"/>
-
-</div>
-
-<br>
+`Java` &nbsp; `Spring Boot` &nbsp; `Web Development` &nbsp; `Backend`
 
 ---
 
-<!-- ========================================================= -->
-<!--                  CONTRIBUTION ACTIVITY                     -->
-<!-- ========================================================= -->
+# 🌌 Currently Exploring
 
-## 📈 Contribution Activity
+<p align="center">
 
-<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=2800&pause=900&color=3B82F6&center=true&vCenter=true&width=750&lines=Advanced+Spring+Boot;REST+API+Development;React+%2B+Modern+Frontend;AWS+Cloud+Technologies;AI+%26+Intelligent+Applications;System+Design" />
+
+</p>
+
+---
+
+# 📊 GitHub Analytics
+
+<p align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=yamuna-ux&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=github&bg_color=0D1117&title_color=8B5CF6&icon_color=3B82F6&text_color=C9D1D9" height="180"/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yamuna-ux&layout=compact&hide_border=true&langs_count=8&bg_color=0D1117&title_color=8B5CF6&text_color=C9D1D9" height="180"/>
+
+</p>
+
+<br>
+
+<p align="center">
+
+<img src="https://streak-stats.demolab.com?user=yamuna-ux&theme=dark&hide_border=true&background=0D1117&ring=8B5CF6&fire=3B82F6&currStreakLabel=8B5CF6&sideLabels=C9D1D9&dates=64748B" width="75%"/>
+
+</p>
+
+---
+
+# 📈 Contribution Activity
+
+<p align="center">
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=yamuna-ux&bg_color=0D1117&color=C9D1D9&line=8B5CF6&point=3B82F6&area=true&hide_border=true&custom_title=Yamuna%20Oli%20%E2%80%94%20Contribution%20Activity" width="96%"/>
 
-</div>
+</p>
 
-<br>
-
----
-
-<!-- ========================================================= -->
-<!--                     CONTRIBUTION SNAKE                     -->
-<!-- ========================================================= -->
-
-## 🐍 Contribution Flow
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/yamuna-ux/yamuna-ux/output/github-contribution-grid-snake-dark.svg" width="90%" alt="Contribution Snake"/>
-
-</div>
-
-<br>
+<p align="center">
+  <i>Every contribution is another step forward.</i>
+</p>
 
 ---
 
-<!-- ========================================================= -->
-<!--                     CURRENTLY LEARNING                     -->
-<!-- ========================================================= -->
+# 🐍 Contribution Journey
 
-## 🧩 Currently Learning
+<p align="center">
 
-<div align="center">
+<img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="90%" alt="GitHub contribution snake"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=2500&pause=700&color=3B82F6&center=true&vCenter=true&width=700&lines=Advanced+Spring+Boot;REST+API+Development;React+%2B+Modern+Frontend;AWS+Cloud;System+Design;AI+%26+Intelligent+Applications"/>
-
-</div>
-
-<br>
+</p>
 
 ---
 
-<!-- ========================================================= -->
-<!--                     DEVELOPER PHILOSOPHY                   -->
-<!-- ========================================================= -->
+# ◇ Developer Philosophy
 
-## ◇ Developer Philosophy
+<p align="center">
 
-<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=3000&pause=1000&color=8B5CF6&center=true&vCenter=true&width=800&lines=Think+%E2%80%A2+Build+%E2%80%A2+Learn+%E2%80%A2+Repeat;Write+clean+code.;Build+useful+things.;Learn+from+every+project.;Keep+improving." />
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=17&duration=3000&pause=1000&color=8B5CF6&center=true&vCenter=true&width=750&lines=Build+with+purpose.;Write+clean+code.;Learn+from+every+project.;Keep+experimenting.;Turn+ideas+into+software."/>
-
-</div>
+</p>
 
 <br>
 
+<p align="center">
+
+<b>Better Code • Brighter Future</b>
+
+</p>
+
 ---
 
-<!-- ========================================================= -->
-<!--                     CONNECT                                -->
-<!-- ========================================================= -->
+# 🌐 Connect With Me
 
-## 🌐 Connect With Me
-
-<div align="center">
+<p align="center">
 
 <a href="https://github.com/yamuna-ux">
 <img src="https://img.shields.io/badge/GitHub-yamuna--ux-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
@@ -339,8 +278,12 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 <img src="https://img.shields.io/badge/LinkedIn-Connect-0D1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2"/>
 </a>
 
-<br><br>
+</p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&animation=twinkling&gradientType=linear&color=0:0D1117,35:241B45,65:151B35,100:0D1117" width="100%"/>
+<br>
 
-</div>
+<p align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=130&section=footer&animation=twinkling&gradientType=linear&color=0:0D1117,35:241B45,65:151B35,100:0D1117" width="100%"/>
+
+</p>
