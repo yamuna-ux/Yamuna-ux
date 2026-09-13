@@ -1,10 +1,14 @@
 <!-- ===================== ANIMATED HEADER ===================== -->
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=260&section=header&text=YAMUNA%20OLI&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Java%20Full%20Stack%20Developer%20%7C%20Software%20Developer&descAlignY=58&descSize=18&color=0:0F172A,35:1E1B4B,70:312E81,100:0F172A" width="100%"/>
-</p>
+<!-- ===================== CUSTOM PORTFOLIO HEADER ===================== -->
 
-<!-- Floating animated glow / bubble effect -->
+<p align="center">
+  <img
+    src="YOUR_HEADER_IMAGE_URL"
+    width="100%"
+    alt="Yamuna Oli — Java Full Stack Developer"
+  />
+</p>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=8B5CF6&center=true&vCenter=true&width=800&lines=Building+Scalable+Web+Applications;Java+%7C+Spring+Boot+%7C+React+%7C+SQL;Exploring+AI%2C+Cloud+%26+Modern+Software;Turning+Ideas+Into+Real+Software" />
