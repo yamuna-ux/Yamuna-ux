@@ -176,20 +176,25 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
 ---
 
-<!-- ===================== STREAK ===================== -->
+<!-- ===================== CONTRIBUTION SECTION ===================== -->
+
+<table width="100%">
+<tr>
+
+<td width="38%" valign="top">
 
 ## 🔥 Contribution Streak
 
 <p align="center">
   <img
     src="https://streak-stats.demolab.com/?user=yamuna-ux&theme=default&background=FFFFFF&border=C4B5FD&stroke=E9D5FF&ring=7C3AED&fire=EC4899&currStreakLabel=7C3AED&sideLabels=06B6D4&currStreakNum=EC4899&sideNums=06B6D4&dates=64748B"
-    width="650"
+    width="100%"
   />
 </p>
 
----
+</td>
 
-<!-- ===================== CONTRIBUTION ACTIVITY ===================== -->
+<td width="62%" valign="top">
 
 ## 📈 Contribution Activity
 
@@ -199,6 +204,11 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
     width="100%"
   />
 </p>
+
+</td>
+
+</tr>
+</table>
 
 <p align="center">
   <i>Every contribution represents another step forward.</i>
@@ -213,6 +223,7 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 <p align="center">
 
 <picture>
+
   <source
     media="(prefers-color-scheme: dark)"
     srcset="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake-dark.svg"
@@ -225,9 +236,10 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
   <img
     src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/output/github-contribution-grid-snake.svg"
-    width="90%"
+    width="95%"
     alt="GitHub contribution snake animation"
   />
+
 </picture>
 
 </p>
