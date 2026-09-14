@@ -1,4 +1,4 @@
-name: Animated Contribution Snake
+name: Colorful Snake
 
 on:
   workflow_dispatch:
@@ -7,68 +7,61 @@ permissions:
   contents: write
 
 jobs:
-  generate:
+  snake:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install Pillow
         run: pip install pillow
 
-      - name: Generate snake GIF
+      - name: Generate Snake GIF
         run: |
           mkdir -p output
 
-          cat > generate_snake.py <<'PY'
+          cat > snake.py <<'PY'
           from PIL import Image, ImageDraw
           import math
 
-          # ============================================================
-          # BOX SETTINGS
-          # ============================================================
-
+          # ==============================
+          # SIZE
+          # ==============================
           WIDTH = 1200
-          HEIGHT = 280
+          HEIGHT = 260
 
           COLS = 48
           ROWS = 7
 
-          DOT_SIZE = 15
-          GAP_X = 8
-          GAP_Y = 8
+          DOT = 14
+          GAP_X = 9
+          GAP_Y = 9
 
           START_X = 45
-          START_Y = 55
+          START_Y = 35
 
-          BG = (7, 12, 25)
+          BACKGROUND = (7, 12, 25)
 
-          # Dark -> bright contribution colors
+          # GitHub-style dark colorful palette
           COLORS = [
-              (25, 22, 70),
-              (49, 46, 129),
-              (109, 40, 217),
-              (6, 182, 212),
-              (236, 72, 153),
+              (25, 22, 70),       # dark purple
+              (49, 46, 129),      # indigo
+              (124, 58, 237),     # purple
+              (6, 182, 212),     # cyan
+              (236, 72, 153),     # pink
           ]
 
-          SNAKE_COLOR = (244, 114, 182)
-          SNAKE_GLOW = (192, 132, 252)
+          SNAKE = (244, 114, 182)
+          SNAKE_GLOW = (168, 85, 247)
 
-          # ============================================================
-          # CREATE GRID
-          # ============================================================
+          # ==============================
+          # CREATE SNAKE PATH
+          # ==============================
 
-          grid = []
+          path = []
 
           for row in range(ROWS):
-
-              # Snake goes:
-              # row 1 -> left to right
-              # row 2 -> right to left
-              # row 3 -> left to right
-              # etc.
 
               if row % 2 == 0:
                   columns = range(COLS)
@@ -76,189 +69,159 @@ jobs:
                   columns = range(COLS - 1, -1, -1)
 
               for col in columns:
-                  grid.append((row, col))
+                  path.append((row, col))
 
-          # ============================================================
-          # POSITION OF EACH DOT
-          # ============================================================
+          # ==============================
+          # DOT POSITION
+          # ==============================
 
-          def dot_position(row, col):
-              x = START_X + col * (DOT_SIZE + GAP_X)
-              y = START_Y + row * (DOT_SIZE + GAP_Y)
+          def position(row, col):
+              x = START_X + col * (DOT + GAP_X)
+              y = START_Y + row * (DOT + GAP_Y)
 
               return x, y
 
-          # ============================================================
-          # CREATE FRAMES
-          # ============================================================
+          # ==============================
+          # FRAMES
+          # ==============================
 
           frames = []
 
-          # Frames per block
-          FRAMES_PER_BLOCK = 3
+          # One block at a time
+          for step in range(len(path)):
 
-          total_blocks = len(grid)
-
-          for step in range(total_blocks + 25):
-
-              img = Image.new(
+              image = Image.new(
                   "RGB",
                   (WIDTH, HEIGHT),
-                  BG
+                  BACKGROUND
               )
 
-              draw = ImageDraw.Draw(img)
+              draw = ImageDraw.Draw(image)
 
-              # --------------------------------------------------------
-              # DRAW ALL DOTS
-              # --------------------------------------------------------
+              # ==========================
+              # DRAW GRID
+              # ==========================
 
-              for index, (row, col) in enumerate(grid):
+              for i, (row, col) in enumerate(path):
 
-                  x, y = dot_position(row, col)
+                  x, y = position(row, col)
 
-                  # Already eaten
-                  if index < step:
-
-                      color = (13, 18, 32)
-
+                  if i < step:
+                      # EATEN BLOCK
+                      color = (10, 16, 30)
                   else:
-
-                      # Make different colourful levels
-                      level = (col + row * 2) % len(COLORS)
-
-                      color = COLORS[level]
+                      # COLOURFUL BLOCK
+                      color = COLORS[(row * 2 + col) % len(COLORS)]
 
                   draw.rounded_rectangle(
                       [
                           x,
                           y,
-                          x + DOT_SIZE,
-                          y + DOT_SIZE
+                          x + DOT,
+                          y + DOT
                       ],
                       radius=4,
                       fill=color
                   )
 
-              # --------------------------------------------------------
-              # SNAKE POSITION
-              # --------------------------------------------------------
+              # ==========================
+              # SNAKE BODY
+              # ==========================
 
-              if step < total_blocks:
+              body_length = 8
 
-                  current_row, current_col = grid[step]
+              start = max(
+                  0,
+                  step - body_length
+              )
 
-                  head_x, head_y = dot_position(
-                      current_row,
-                      current_col
-                  )
+              body = []
 
-                  # ----------------------------------------------------
-                  # SNAKE BODY
-                  # ----------------------------------------------------
+              for i in range(start, step + 1):
 
-                  body = []
+                  row, col = path[i]
 
-                  body_length = 7
+                  x, y = position(row, col)
 
-                  start_index = max(
-                      0,
-                      step - body_length
-                  )
-
-                  for body_index in range(
-                      start_index,
-                      step + 1
-                  ):
-
-                      r, c = grid[body_index]
-
-                      bx, by = dot_position(r, c)
-
-                      body.append(
-                          (
-                              bx + DOT_SIZE // 2,
-                              by + DOT_SIZE // 2
-                          )
+                  body.append(
+                      (
+                          x + DOT // 2,
+                          y + DOT // 2
                       )
-
-                  # Draw glow
-                  if len(body) > 1:
-
-                      draw.line(
-                          body,
-                          fill=SNAKE_GLOW,
-                          width=12,
-                          joint="curve"
-                      )
-
-                      draw.line(
-                          body,
-                          fill=SNAKE_COLOR,
-                          width=7,
-                          joint="curve"
-                      )
-
-                  # ----------------------------------------------------
-                  # SNAKE HEAD
-                  # ----------------------------------------------------
-
-                  cx = head_x + DOT_SIZE // 2
-                  cy = head_y + DOT_SIZE // 2
-
-                  draw.ellipse(
-                      [
-                          cx - 10,
-                          cy - 10,
-                          cx + 10,
-                          cy + 10
-                      ],
-                      fill=SNAKE_COLOR
                   )
 
-                  # Head highlight
-                  draw.ellipse(
-                      [
-                          cx - 5,
-                          cy - 6,
-                          cx + 5,
-                          cy + 4
-                      ],
-                      fill=(255, 255, 255)
+              if len(body) > 1:
+
+                  # Glow
+                  draw.line(
+                      body,
+                      fill=SNAKE_GLOW,
+                      width=13,
+                      joint="curve"
                   )
 
-                  # Eyes
-                  draw.ellipse(
-                      [
-                          cx + 1,
-                          cy - 4,
-                          cx + 4,
-                          cy - 1
-                      ],
-                      fill=(30, 20, 50)
+                  # Main body
+                  draw.line(
+                      body,
+                      fill=SNAKE,
+                      width=7,
+                      joint="curve"
                   )
 
-                  draw.ellipse(
-                      [
-                          cx + 1,
-                          cy + 2,
-                          cx + 4,
-                          cy + 5
-                      ],
-                      fill=(30, 20, 50)
-                  )
+              # ==========================
+              # SNAKE HEAD
+              # ==========================
 
-              # --------------------------------------------------------
+              row, col = path[step]
+
+              x, y = position(row, col)
+
+              cx = x + DOT // 2
+              cy = y + DOT // 2
+
+              # Head glow
+              draw.ellipse(
+                  [
+                      cx - 11,
+                      cy - 11,
+                      cx + 11,
+                      cy + 11
+                  ],
+                  fill=SNAKE_GLOW
+              )
+
+              # Head
+              draw.ellipse(
+                  [
+                      cx - 8,
+                      cy - 8,
+                      cx + 8,
+                      cy + 8
+                  ],
+                  fill=SNAKE
+              )
+
+              # Eye
+              draw.ellipse(
+                  [
+                      cx + 2,
+                      cy - 4,
+                      cx + 5,
+                      cy - 1
+                  ],
+                  fill=(255, 255, 255)
+              )
+
+              # ==========================
               # PROGRESS BAR
-              # --------------------------------------------------------
+              # ==========================
 
               bar_x = 45
-              bar_y = 230
-
+              bar_y = 210
               bar_width = 1110
-              bar_height = 5
+              bar_height = 6
 
-              # Background bar
+              # Background
               draw.rounded_rectangle(
                   [
                       bar_x,
@@ -271,64 +234,61 @@ jobs:
               )
 
               # Progress
-              progress = min(
-                  step / total_blocks,
-                  1
-              )
+              progress = step / (len(path) - 1)
 
-              progress_width = int(
+              current_width = int(
                   bar_width * progress
               )
 
-              if progress_width > 0:
+              if current_width > 0:
 
                   draw.rounded_rectangle(
                       [
                           bar_x,
                           bar_y,
-                          bar_x + progress_width,
+                          bar_x + current_width,
                           bar_y + bar_height
                       ],
                       radius=3,
-                      fill=(236, 72, 153)
+                      fill=SNAKE
                   )
 
-              frames.append(img)
+              frames.append(image)
 
-          # ============================================================
-          # HOLD LAST FRAME
-          # ============================================================
+          # ==============================
+          # HOLD END
+          # ==============================
 
-          for _ in range(15):
+          for _ in range(20):
               frames.append(frames[-1])
 
-          # ============================================================
-          # SAVE GIF
-          # ============================================================
+          # ==============================
+          # SAVE
+          # ==============================
 
           frames[0].save(
               "output/custom-snake.gif",
               save_all=True,
               append_images=frames[1:],
-              duration=70,
+              duration=45,
               loop=0,
               optimize=True
           )
 
-          print("Snake generated successfully!")
-          print("Blocks:", total_blocks)
+          print("DONE")
+          print("Blocks eaten:", len(path))
           print("Frames:", len(frames))
           PY
 
-          python generate_snake.py
+          python snake.py
 
-      - name: Commit generated snake
+      - name: Save GIF
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add output/custom-snake.gif
 
-          git commit -m "Update animated contribution snake" || echo "No changes"
+          git commit -m "Update colorful snake" || true
 
           git push
