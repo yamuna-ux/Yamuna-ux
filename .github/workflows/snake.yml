@@ -17,11 +17,12 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: yamuna-ux
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.METRICS_TOKEN }}
           outputs: |
-            dist/github-contribution-snake.gif?color_snake=7C3AED&color_dots=FFFFFF,EDE9FE,C4B5FD,8B5CF6,EC4899&color_background=FFFFFF
+            dist/github-contribution-snake.svg?palette=github-light&color_snake=7C3AED&color_dots=FFFFFF,EDE9FE,C4B5FD,8B5CF6,EC4899
+            dist/github-contribution-snake-dark.svg?palette=github-dark&color_snake=EC4899&color_dots=161B22,312E81,4338CA,7C3AED,EC4899
 
-      - name: Publish snake
+      - name: Publish contribution snake
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
