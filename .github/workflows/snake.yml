@@ -13,14 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate colorful contribution snake
+      - name: Generate contribution snake
         uses: Platane/snk@v3
         with:
           github_user_name: yamuna-ux
           github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
-            dist/github-contribution-snake.gif?color_snake=EC4899&color_dots=FFFFFF,EDE9FE,C4B5FD,8B5CF6,7C3AED&color_background=FFFFFF
-            dist/github-contribution-snake-dark.gif?color_snake=06B6D4&color_dots=161B22,312E81,4338CA,7C3AED,06B6D4&color_background=0D1117
+            dist/github-contribution-snake.gif?color_snake=7C3AED&color_dots=FFFFFF,EDE9FE,C4B5FD,8B5CF6,EC4899&color_background=FFFFFF
 
       - name: Publish snake
         uses: crazy-max/ghaction-github-pages@v4
