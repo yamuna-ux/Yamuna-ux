@@ -20,10 +20,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
           outputs: |
-            dist/github-contribution-snake.svg?color_snake=#EC4899&color_dots=#161B22,#4C1D95,#7C3AED,#06B6D4,#EC4899
-            dist/github-contribution-snake-dark.svg?color_snake=#A855F7&color_dots=#0F172A,#312E81,#7C3AED,#06B6D4,#EC4899
+            dist/github-contribution-snake.svg?color_snake=%23EC4899&color_dots=%23C4B5FD,%238B5CF6,%2306B6D4,%23EC4899,%23F472B6
+            dist/github-contribution-snake-dark.svg?color_snake=%23F472B6&color_dots=%23312E81,%237C3AED,%2306B6D4,%23EC4899,%23F472B6
 
-      - name: Publish colorful snake
+      - name: Publish snake
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
