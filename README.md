@@ -216,14 +216,18 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
 <!-- ===================== CUSTOM SNAKE ===================== -->
 
-## 🐍 Contribution Journey
+### 🐍 Contribution Journey
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/main/output/custom-snake.svg"
+    src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/main/output/custom-snake.gif?v=10"
     width="95%"
-    alt="Yamuna Oli Colorful Contribution Snake"
+    alt="Yamuna Oli Animated Contribution Snake"
   />
+</p>
+
+<p align="center">
+  <i>Every contribution represents another step forward.</i>
 </p>
 
 ---
