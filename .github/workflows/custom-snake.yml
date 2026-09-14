@@ -1,0 +1,159 @@
+name: Custom Colorful Snake
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create colorful snake SVG
+        run: |
+          mkdir -p output
+
+          python3 <<'PY'
+          import math
+
+          width = 1100
+          height = 230
+
+          colors = [
+              "#312E81",
+              "#4C1D95",
+              "#7C3AED",
+              "#06B6D4",
+              "#EC4899",
+              "#F472B6"
+          ]
+
+          dots = []
+
+          # Dense colorful contribution grid
+          for row in range(7):
+              for col in range(45):
+                  x = 30 + col * 23
+                  y = 25 + row * 25
+
+                  # deterministic colorful pattern
+                  index = (col * 3 + row * 2) % len(colors)
+
+                  dots.append(
+                      f'<rect x="{x}" y="{y}" width="15" height="15" rx="3" '
+                      f'fill="{colors[index]}" opacity="0.9"/>'
+                  )
+
+          # Snake path
+          snake_points = []
+
+          for i in range(80):
+              x = 20 + i * 13
+              y = 115 + math.sin(i / 3.5) * 55
+              snake_points.append(f"{x:.1f},{y:.1f}")
+
+          path = " ".join(snake_points)
+
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 {width} {height}"
+          width="{width}"
+          height="{height}">
+
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="5" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+
+            <linearGradient id="snakeGradient"
+              x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#06B6D4"/>
+              <stop offset="35%" stop-color="#7C3AED"/>
+              <stop offset="70%" stop-color="#EC4899"/>
+              <stop offset="100%" stop-color="#F472B6"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Dark background -->
+          <rect width="100%" height="100%"
+                rx="18"
+                fill="#0B1120"/>
+
+          <!-- Colorful contribution dots -->
+          {"".join(dots)}
+
+          <!-- Animated snake -->
+          <polyline
+            points="{path}"
+            fill="none"
+            stroke="#000000"
+            stroke-width="18"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            opacity="0.35"/>
+
+          <polyline
+            points="{path}"
+            fill="none"
+            stroke="url(#snakeGradient)"
+            stroke-width="12"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-dasharray="55 900"
+            filter="url(#glow)">
+
+            <animate
+              attributeName="stroke-dashoffset"
+              from="0"
+              to="-955"
+              dur="4s"
+              repeatCount="indefinite"/>
+          </polyline>
+
+          <!-- Snake head -->
+          <circle cx="1050" cy="90"
+                  r="12"
+                  fill="#F472B6"
+                  filter="url(#glow)">
+            <animate
+              attributeName="r"
+              values="10;14;10"
+              dur="0.8s"
+              repeatCount="indefinite"/>
+          </circle>
+
+          <circle cx="1054" cy="86"
+                  r="2.5"
+                  fill="white"/>
+
+          <circle cx="1047" cy="86"
+                  r="2.5"
+                  fill="white"/>
+
+          </svg>'''
+
+          with open("output/custom-snake.svg", "w") as f:
+              f.write(svg)
+
+          print("Custom colorful snake created!")
+
+      - name: Publish SVG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add output/custom-snake.svg
+
+          git commit -m "Update colorful contribution snake" || echo "No changes"
+
+          git push
