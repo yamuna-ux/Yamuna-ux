@@ -1,9 +1,7 @@
-name: Custom Colorful Snake
+name: Animated Contribution Snake
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
 
 permissions:
   contents: write
@@ -16,144 +14,321 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create colorful snake SVG
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Generate snake GIF
         run: |
           mkdir -p output
 
-          python3 <<'PY'
+          cat > generate_snake.py <<'PY'
+          from PIL import Image, ImageDraw
           import math
 
-          width = 1100
-          height = 230
+          # ============================================================
+          # BOX SETTINGS
+          # ============================================================
 
-          colors = [
-              "#312E81",
-              "#4C1D95",
-              "#7C3AED",
-              "#06B6D4",
-              "#EC4899",
-              "#F472B6"
+          WIDTH = 1200
+          HEIGHT = 280
+
+          COLS = 48
+          ROWS = 7
+
+          DOT_SIZE = 15
+          GAP_X = 8
+          GAP_Y = 8
+
+          START_X = 45
+          START_Y = 55
+
+          BG = (7, 12, 25)
+
+          # Dark -> bright contribution colors
+          COLORS = [
+              (25, 22, 70),
+              (49, 46, 129),
+              (109, 40, 217),
+              (6, 182, 212),
+              (236, 72, 153),
           ]
 
-          dots = []
+          SNAKE_COLOR = (244, 114, 182)
+          SNAKE_GLOW = (192, 132, 252)
 
-          # Dense colorful contribution grid
-          for row in range(7):
-              for col in range(45):
-                  x = 30 + col * 23
-                  y = 25 + row * 25
+          # ============================================================
+          # CREATE GRID
+          # ============================================================
 
-                  # deterministic colorful pattern
-                  index = (col * 3 + row * 2) % len(colors)
+          grid = []
 
-                  dots.append(
-                      f'<rect x="{x}" y="{y}" width="15" height="15" rx="3" '
-                      f'fill="{colors[index]}" opacity="0.9"/>'
+          for row in range(ROWS):
+
+              # Snake goes:
+              # row 1 -> left to right
+              # row 2 -> right to left
+              # row 3 -> left to right
+              # etc.
+
+              if row % 2 == 0:
+                  columns = range(COLS)
+              else:
+                  columns = range(COLS - 1, -1, -1)
+
+              for col in columns:
+                  grid.append((row, col))
+
+          # ============================================================
+          # POSITION OF EACH DOT
+          # ============================================================
+
+          def dot_position(row, col):
+              x = START_X + col * (DOT_SIZE + GAP_X)
+              y = START_Y + row * (DOT_SIZE + GAP_Y)
+
+              return x, y
+
+          # ============================================================
+          # CREATE FRAMES
+          # ============================================================
+
+          frames = []
+
+          # Frames per block
+          FRAMES_PER_BLOCK = 3
+
+          total_blocks = len(grid)
+
+          for step in range(total_blocks + 25):
+
+              img = Image.new(
+                  "RGB",
+                  (WIDTH, HEIGHT),
+                  BG
+              )
+
+              draw = ImageDraw.Draw(img)
+
+              # --------------------------------------------------------
+              # DRAW ALL DOTS
+              # --------------------------------------------------------
+
+              for index, (row, col) in enumerate(grid):
+
+                  x, y = dot_position(row, col)
+
+                  # Already eaten
+                  if index < step:
+
+                      color = (13, 18, 32)
+
+                  else:
+
+                      # Make different colourful levels
+                      level = (col + row * 2) % len(COLORS)
+
+                      color = COLORS[level]
+
+                  draw.rounded_rectangle(
+                      [
+                          x,
+                          y,
+                          x + DOT_SIZE,
+                          y + DOT_SIZE
+                      ],
+                      radius=4,
+                      fill=color
                   )
 
-          # Snake path
-          snake_points = []
+              # --------------------------------------------------------
+              # SNAKE POSITION
+              # --------------------------------------------------------
 
-          for i in range(80):
-              x = 20 + i * 13
-              y = 115 + math.sin(i / 3.5) * 55
-              snake_points.append(f"{x:.1f},{y:.1f}")
+              if step < total_blocks:
 
-          path = " ".join(snake_points)
+                  current_row, current_col = grid[step]
 
-          svg = f'''<svg xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 {width} {height}"
-          width="{width}"
-          height="{height}">
+                  head_x, head_y = dot_position(
+                      current_row,
+                      current_col
+                  )
 
-          <defs>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="5" result="blur"/>
-              <feMerge>
-                <feMergeNode in="blur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
+                  # ----------------------------------------------------
+                  # SNAKE BODY
+                  # ----------------------------------------------------
 
-            <linearGradient id="snakeGradient"
-              x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#06B6D4"/>
-              <stop offset="35%" stop-color="#7C3AED"/>
-              <stop offset="70%" stop-color="#EC4899"/>
-              <stop offset="100%" stop-color="#F472B6"/>
-            </linearGradient>
-          </defs>
+                  body = []
 
-          <!-- Dark background -->
-          <rect width="100%" height="100%"
-                rx="18"
-                fill="#0B1120"/>
+                  body_length = 7
 
-          <!-- Colorful contribution dots -->
-          {"".join(dots)}
+                  start_index = max(
+                      0,
+                      step - body_length
+                  )
 
-          <!-- Animated snake -->
-          <polyline
-            points="{path}"
-            fill="none"
-            stroke="#000000"
-            stroke-width="18"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            opacity="0.35"/>
+                  for body_index in range(
+                      start_index,
+                      step + 1
+                  ):
 
-          <polyline
-            points="{path}"
-            fill="none"
-            stroke="url(#snakeGradient)"
-            stroke-width="12"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-dasharray="55 900"
-            filter="url(#glow)">
+                      r, c = grid[body_index]
 
-            <animate
-              attributeName="stroke-dashoffset"
-              from="0"
-              to="-955"
-              dur="4s"
-              repeatCount="indefinite"/>
-          </polyline>
+                      bx, by = dot_position(r, c)
 
-          <!-- Snake head -->
-          <circle cx="1050" cy="90"
-                  r="12"
-                  fill="#F472B6"
-                  filter="url(#glow)">
-            <animate
-              attributeName="r"
-              values="10;14;10"
-              dur="0.8s"
-              repeatCount="indefinite"/>
-          </circle>
+                      body.append(
+                          (
+                              bx + DOT_SIZE // 2,
+                              by + DOT_SIZE // 2
+                          )
+                      )
 
-          <circle cx="1054" cy="86"
-                  r="2.5"
-                  fill="white"/>
+                  # Draw glow
+                  if len(body) > 1:
 
-          <circle cx="1047" cy="86"
-                  r="2.5"
-                  fill="white"/>
+                      draw.line(
+                          body,
+                          fill=SNAKE_GLOW,
+                          width=12,
+                          joint="curve"
+                      )
 
-          </svg>'''
+                      draw.line(
+                          body,
+                          fill=SNAKE_COLOR,
+                          width=7,
+                          joint="curve"
+                      )
 
-          with open("output/custom-snake.svg", "w") as f:
-              f.write(svg)
+                  # ----------------------------------------------------
+                  # SNAKE HEAD
+                  # ----------------------------------------------------
 
-          print("Custom colorful snake created!")
+                  cx = head_x + DOT_SIZE // 2
+                  cy = head_y + DOT_SIZE // 2
 
-      - name: Publish SVG
+                  draw.ellipse(
+                      [
+                          cx - 10,
+                          cy - 10,
+                          cx + 10,
+                          cy + 10
+                      ],
+                      fill=SNAKE_COLOR
+                  )
+
+                  # Head highlight
+                  draw.ellipse(
+                      [
+                          cx - 5,
+                          cy - 6,
+                          cx + 5,
+                          cy + 4
+                      ],
+                      fill=(255, 255, 255)
+                  )
+
+                  # Eyes
+                  draw.ellipse(
+                      [
+                          cx + 1,
+                          cy - 4,
+                          cx + 4,
+                          cy - 1
+                      ],
+                      fill=(30, 20, 50)
+                  )
+
+                  draw.ellipse(
+                      [
+                          cx + 1,
+                          cy + 2,
+                          cx + 4,
+                          cy + 5
+                      ],
+                      fill=(30, 20, 50)
+                  )
+
+              # --------------------------------------------------------
+              # PROGRESS BAR
+              # --------------------------------------------------------
+
+              bar_x = 45
+              bar_y = 230
+
+              bar_width = 1110
+              bar_height = 5
+
+              # Background bar
+              draw.rounded_rectangle(
+                  [
+                      bar_x,
+                      bar_y,
+                      bar_x + bar_width,
+                      bar_y + bar_height
+                  ],
+                  radius=3,
+                  fill=(30, 35, 55)
+              )
+
+              # Progress
+              progress = min(
+                  step / total_blocks,
+                  1
+              )
+
+              progress_width = int(
+                  bar_width * progress
+              )
+
+              if progress_width > 0:
+
+                  draw.rounded_rectangle(
+                      [
+                          bar_x,
+                          bar_y,
+                          bar_x + progress_width,
+                          bar_y + bar_height
+                      ],
+                      radius=3,
+                      fill=(236, 72, 153)
+                  )
+
+              frames.append(img)
+
+          # ============================================================
+          # HOLD LAST FRAME
+          # ============================================================
+
+          for _ in range(15):
+              frames.append(frames[-1])
+
+          # ============================================================
+          # SAVE GIF
+          # ============================================================
+
+          frames[0].save(
+              "output/custom-snake.gif",
+              save_all=True,
+              append_images=frames[1:],
+              duration=70,
+              loop=0,
+              optimize=True
+          )
+
+          print("Snake generated successfully!")
+          print("Blocks:", total_blocks)
+          print("Frames:", len(frames))
+          PY
+
+          python generate_snake.py
+
+      - name: Commit generated snake
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add output/custom-snake.svg
+          git add output/custom-snake.gif
 
-          git commit -m "Update colorful contribution snake" || echo "No changes"
+          git commit -m "Update animated contribution snake" || echo "No changes"
 
           git push
