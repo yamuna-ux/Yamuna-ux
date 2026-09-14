@@ -1,3 +1,5 @@
+# .github/workflows/snake.yml
+
 name: Generate Colorful Contribution Snake
 
 on:
@@ -13,17 +15,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate colorful snake
+      - name: Generate Snake
         uses: Platane/snk@v3
         with:
           github_user_name: yamuna-ux
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
           outputs: |
-            dist/github-contribution-snake.svg?color_snake=%23059669&color_dots=%23EBEDF0,%23BAE6A8,%2356D364,%2339D353,%230E7C36
-            dist/github-contribution-snake-dark.svg?color_snake=%2339FF88&color_dots=%23161B22,%231F7A4D,%232EA043,%2356D364,%237EE787
+            dist/github-contribution-snake.svg?color_snake=%23FFFFFF&color_dots=%23161B22,%23059669,%2339D353,%2356D364,%23A7F3D0
+            dist/github-contribution-snake-dark.svg?color_snake=%23FFFFFF&color_dots=%230B1120,%23065F46,%23059669,%2339D353,%23A7F3D0
 
-      - name: Publish snake
+      - name: Publish Snake
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
