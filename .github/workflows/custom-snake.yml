@@ -23,7 +23,7 @@ jobs:
 
           cat > snake.py <<'PY'
           from PIL import Image, ImageDraw
-          import math
+          import random
 
           # ==============================
           # SIZE
@@ -48,38 +48,139 @@ jobs:
               (25, 22, 70),       # dark purple
               (49, 46, 129),      # indigo
               (124, 58, 237),     # purple
-              (6, 182, 212),     # cyan
+              (6, 182, 212),      # cyan
               (236, 72, 153),     # pink
           ]
 
-          SNAKE = (244, 114, 182)
-          SNAKE_GLOW = (168, 85, 247)
-
           # ==============================
-          # CREATE SNAKE PATH
+          # ANIMATION SETTINGS
           # ==============================
 
-          path = []
+          # Medium smooth speed
+          FRAMES_PER_MOVE = 3
+          FRAME_DURATION = 70
 
-          for row in range(ROWS):
+          # Smaller snake
+          BODY_LENGTH = 5
+          BODY_WIDTH = 6
+          GLOW_WIDTH = 10
 
-              if row % 2 == 0:
-                  columns = range(COLS)
-              else:
-                  columns = range(COLS - 1, -1, -1)
+          HEAD_SIZE = 7
+          HEAD_GLOW_SIZE = 9
 
-              for col in columns:
-                  path.append((row, col))
+          # ==============================
+          # CREATE RANDOM PATH
+          # ==============================
+          #
+          # Randomized DFS creates a connected,
+          # non-straight path through the grid.
+          #
+          # The snake can move up/down/left/right
+          # and randomly changes direction.
+          # ==============================
+
+          def create_random_path():
+
+              start = (
+                  random.randint(0, ROWS - 1),
+                  random.randint(0, COLS - 1)
+              )
+
+              visited = {start}
+
+              stack = [start]
+
+              path = [start]
+
+              while stack:
+
+                  row, col = stack[-1]
+
+                  neighbors = [
+                      (row - 1, col),
+                      (row + 1, col),
+                      (row, col - 1),
+                      (row, col + 1)
+                  ]
+
+                  random.shuffle(neighbors)
+
+                  available = []
+
+                  for cell in neighbors:
+
+                      r, c = cell
+
+                      if (
+                          0 <= r < ROWS
+                          and 0 <= c < COLS
+                          and cell not in visited
+                      ):
+                          available.append(cell)
+
+                  if available:
+
+                      next_cell = random.choice(available)
+
+                      visited.add(next_cell)
+
+                      stack.append(next_cell)
+
+                      path.append(next_cell)
+
+                  else:
+
+                      stack.pop()
+
+                      # Move back through an already eaten area
+                      # to reach another random block.
+                      if stack:
+                          path.append(stack[-1])
+
+              return path
+
+
+          path = create_random_path()
 
           # ==============================
           # DOT POSITION
           # ==============================
 
           def position(row, col):
+
               x = START_X + col * (DOT + GAP_X)
               y = START_Y + row * (DOT + GAP_Y)
 
               return x, y
+
+
+          # ==============================
+          # SMOOTH MOVEMENT
+          # ==============================
+
+          def smooth_step(value):
+
+              # Smooth ease-in/ease-out
+              return (
+                  3 * value * value
+                  - 2 * value * value * value
+              )
+
+
+          # ==============================
+          # BLOCK COLORS
+          # ==============================
+
+          block_colors = {}
+
+          for row in range(ROWS):
+
+              for col in range(COLS):
+
+                  block_colors[(row, col)] = random.choice(
+                      COLORS
+                  )
+
 
           # ==============================
           # FRAMES
@@ -87,31 +188,43 @@ jobs:
 
           frames = []
 
-          # One block at a time
-          for step in range(len(path)):
+          eaten = set()
 
-              image = Image.new(
-                  "RGB",
-                  (WIDTH, HEIGHT),
-                  BACKGROUND
+          # Current snake color
+          snake_color = (236, 72, 153)
+
+          # Position history
+          history = []
+
+          # Start position
+          start_position = position(*path[0])
+
+          history.append(
+              (
+                  start_position[0] + DOT // 2,
+                  start_position[1] + DOT // 2
               )
+          )
 
-              draw = ImageDraw.Draw(image)
+          # ==============================
+          # INITIAL FRAME
+          # ==============================
 
-              # ==========================
-              # DRAW GRID
-              # ==========================
+          image = Image.new(
+              "RGB",
+              (WIDTH, HEIGHT),
+              BACKGROUND
+          )
 
-              for i, (row, col) in enumerate(path):
+          draw = ImageDraw.Draw(image)
+
+          for row in range(ROWS):
+
+              for col in range(COLS):
 
                   x, y = position(row, col)
 
-                  if i < step:
-                      # EATEN BLOCK
-                      color = (10, 16, 30)
-                  else:
-                      # COLOURFUL BLOCK
-                      color = COLORS[(row * 2 + col) % len(COLORS)]
+                  color = block_colors[(row, col)]
 
                   draw.rounded_rectangle(
                       [
@@ -124,159 +237,307 @@ jobs:
                       fill=color
                   )
 
-              # ==========================
-              # SNAKE BODY
-              # ==========================
+          frames.append(image)
 
-              body_length = 8
+          # ==============================
+          # MOVE THROUGH RANDOM PATH
+          # ==============================
 
-              start = max(
-                  0,
-                  step - body_length
+          for step in range(1, len(path)):
+
+              previous_cell = path[step - 1]
+              current_cell = path[step]
+
+              previous_x, previous_y = position(
+                  *previous_cell
               )
 
-              body = []
+              current_x, current_y = position(
+                  *current_cell
+              )
 
-              for i in range(start, step + 1):
+              start_x = previous_x + DOT // 2
+              start_y = previous_y + DOT // 2
 
-                  row, col = path[i]
+              end_x = current_x + DOT // 2
+              end_y = current_y + DOT // 2
 
-                  x, y = position(row, col)
+              # ==========================
+              # SMOOTH MOVEMENT FRAMES
+              # ==========================
 
-                  body.append(
-                      (
-                          x + DOT // 2,
-                          y + DOT // 2
+              for frame_number in range(
+                  1,
+                  FRAMES_PER_MOVE + 1
+              ):
+
+                  progress = (
+                      frame_number
+                      / FRAMES_PER_MOVE
+                  )
+
+                  progress = smooth_step(progress)
+
+                  head_x = (
+                      start_x
+                      + (end_x - start_x)
+                      * progress
+                  )
+
+                  head_y = (
+                      start_y
+                      + (end_y - start_y)
+                      * progress
+                  )
+
+                  # ==========================
+                  # EAT BLOCK AT DESTINATION
+                  # ==========================
+
+                  if frame_number == FRAMES_PER_MOVE:
+
+                      if current_cell not in eaten:
+
+                          eaten.add(current_cell)
+
+                          # Change snake color
+                          # according to eaten block
+                          snake_color = block_colors[
+                              current_cell
+                          ]
+
+                  # ==========================
+                  # UPDATE HISTORY
+                  # ==========================
+
+                  current_history = history.copy()
+
+                  current_history.insert(
+                      0,
+                      (head_x, head_y)
+                  )
+
+                  current_history = current_history[
+                      :BODY_LENGTH
+                  ]
+
+                  # ==========================
+                  # CREATE IMAGE
+                  # ==========================
+
+                  image = Image.new(
+                      "RGB",
+                      (WIDTH, HEIGHT),
+                      BACKGROUND
+                  )
+
+                  draw = ImageDraw.Draw(image)
+
+                  # ==========================
+                  # DRAW GRID
+                  # ==========================
+
+                  for row in range(ROWS):
+
+                      for col in range(COLS):
+
+                          cell = (row, col)
+
+                          x, y = position(
+                              row,
+                              col
+                          )
+
+                          if cell in eaten:
+
+                              # Eaten block becomes dark
+                              color = (10, 16, 30)
+
+                          else:
+
+                              color = block_colors[
+                                  cell
+                              ]
+
+                          draw.rounded_rectangle(
+                              [
+                                  x,
+                                  y,
+                                  x + DOT,
+                                  y + DOT
+                              ],
+                              radius=4,
+                              fill=color
+                          )
+
+                  # ==========================
+                  # DRAW SNAKE
+                  # ==========================
+
+                  if len(current_history) > 1:
+
+                      # Glow
+                      draw.line(
+                          current_history,
+                          fill=snake_color,
+                          width=GLOW_WIDTH,
+                          joint="curve"
                       )
+
+                      # Main body
+                      draw.line(
+                          current_history,
+                          fill=snake_color,
+                          width=BODY_WIDTH,
+                          joint="curve"
+                      )
+
+                  # ==========================
+                  # DRAW BODY DOTS
+                  # ==========================
+
+                  for body_index, (
+                      body_x,
+                      body_y
+                  ) in enumerate(
+                      current_history[1:]
+                  ):
+
+                      radius = max(
+                          3,
+                          5 - body_index
+                      )
+
+                      draw.ellipse(
+                          [
+                              body_x - radius,
+                              body_y - radius,
+                              body_x + radius,
+                              body_y + radius
+                          ],
+                          fill=snake_color
+                      )
+
+                  # ==========================
+                  # DRAW HEAD GLOW
+                  # ==========================
+
+                  draw.ellipse(
+                      [
+                          head_x - HEAD_GLOW_SIZE,
+                          head_y - HEAD_GLOW_SIZE,
+                          head_x + HEAD_GLOW_SIZE,
+                          head_y + HEAD_GLOW_SIZE
+                      ],
+                      fill=snake_color
                   )
 
-              if len(body) > 1:
+                  # ==========================
+                  # DRAW HEAD
+                  # ==========================
 
-                  # Glow
-                  draw.line(
-                      body,
-                      fill=SNAKE_GLOW,
-                      width=13,
-                      joint="curve"
+                  draw.ellipse(
+                      [
+                          head_x - HEAD_SIZE,
+                          head_y - HEAD_SIZE,
+                          head_x + HEAD_SIZE,
+                          head_y + HEAD_SIZE
+                      ],
+                      fill=snake_color
                   )
 
-                  # Main body
-                  draw.line(
-                      body,
-                      fill=SNAKE,
-                      width=7,
-                      joint="curve"
+                  # ==========================
+                  # EYE
+                  # ==========================
+
+                  draw.ellipse(
+                      [
+                          head_x + 2,
+                          head_y - 4,
+                          head_x + 5,
+                          head_y - 1
+                      ],
+                      fill=(255, 255, 255)
                   )
 
-              # ==========================
-              # SNAKE HEAD
-              # ==========================
+                  # ==========================
+                  # PROGRESS BAR
+                  # ==========================
 
-              row, col = path[step]
+                  bar_x = 45
+                  bar_y = 210
+                  bar_width = 1110
+                  bar_height = 6
 
-              x, y = position(row, col)
-
-              cx = x + DOT // 2
-              cy = y + DOT // 2
-
-              # Head glow
-              draw.ellipse(
-                  [
-                      cx - 11,
-                      cy - 11,
-                      cx + 11,
-                      cy + 11
-                  ],
-                  fill=SNAKE_GLOW
-              )
-
-              # Head
-              draw.ellipse(
-                  [
-                      cx - 8,
-                      cy - 8,
-                      cx + 8,
-                      cy + 8
-                  ],
-                  fill=SNAKE
-              )
-
-              # Eye
-              draw.ellipse(
-                  [
-                      cx + 2,
-                      cy - 4,
-                      cx + 5,
-                      cy - 1
-                  ],
-                  fill=(255, 255, 255)
-              )
-
-              # ==========================
-              # PROGRESS BAR
-              # ==========================
-
-              bar_x = 45
-              bar_y = 210
-              bar_width = 1110
-              bar_height = 6
-
-              # Background
-              draw.rounded_rectangle(
-                  [
-                      bar_x,
-                      bar_y,
-                      bar_x + bar_width,
-                      bar_y + bar_height
-                  ],
-                  radius=3,
-                  fill=(30, 35, 55)
-              )
-
-              # Progress
-              progress = step / (len(path) - 1)
-
-              current_width = int(
-                  bar_width * progress
-              )
-
-              if current_width > 0:
-
+                  # Background
                   draw.rounded_rectangle(
                       [
                           bar_x,
                           bar_y,
-                          bar_x + current_width,
+                          bar_x + bar_width,
                           bar_y + bar_height
                       ],
                       radius=3,
-                      fill=SNAKE
+                      fill=(30, 35, 55)
                   )
 
-              frames.append(image)
+                  # Progress based on eaten blocks
+                  progress = len(eaten) / (
+                      COLS * ROWS
+                  )
+
+                  current_width = int(
+                      bar_width * progress
+                  )
+
+                  if current_width > 0:
+
+                      draw.rounded_rectangle(
+                          [
+                              bar_x,
+                              bar_y,
+                              bar_x + current_width,
+                              bar_y + bar_height
+                          ],
+                          radius=3,
+                          fill=snake_color
+                      )
+
+                  frames.append(image)
+
+              # Add final position to history
+              history.insert(
+                  0,
+                  (end_x, end_y)
+              )
+
+              history = history[:BODY_LENGTH]
 
           # ==============================
-          # HOLD END
+          # HOLD FINAL FRAME
           # ==============================
 
           for _ in range(20):
-              frames.append(frames[-1])
+
+              frames.append(
+                  frames[-1]
+              )
 
           # ==============================
-          # SAVE
+          # SAVE GIF
           # ==============================
 
           frames[0].save(
               "output/custom-snake.gif",
               save_all=True,
               append_images=frames[1:],
-              duration=45,
+              duration=FRAME_DURATION,
               loop=0,
               optimize=True
           )
 
           print("DONE")
-          print("Blocks eaten:", len(path))
+          print("Blocks eaten:", len(eaten))
           print("Frames:", len(frames))
           PY
 
