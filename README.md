@@ -152,22 +152,6 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 
 ---
 
-<!-- ===================== GITHUB STATS ===================== -->
-
-## 📊 GitHub Analytics
-
-<p align="center">
-
-<img
-  src="https://raw.githubusercontent.com/yamuna-ux/Yamuna-ux/main/assets/github-stats.svg"
-  width="95%"
-  alt="Yamuna Oli GitHub Statistics"
-/>
-
-</p>
-
----
-
 <!-- ===================== CONTRIBUTION SECTION ===================== -->
 
 <table width="100%">
@@ -212,7 +196,6 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
 ---
 
 <!-- ===================== SNAKE ===================== -->
-
 ## 🐍 Contribution Journey
 
 <p align="center">
@@ -221,6 +204,10 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
     width="95%"
     alt="Yamuna Oli Colorful Contribution Snake"
   />
+</p>
+
+<p align="center">
+  <i>Every contribution represents another step forward.</i>
 </p>
 
 ---
@@ -235,7 +222,7 @@ Completed a Full Stack Web Development internship focused on **Java Spring Boot*
   <img src="https://img.shields.io/badge/GitHub-Yamuna%20Oli-7C3AED?style=for-the-badge&logo=github&logoColor=white&labelColor=4F46E5"/>
 </a>
 
-<a href="https://www.linkedin.com/in/yamuna-oli-bb8981309/">
+<a href="https://www.linkedin.com/">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-06B6D4?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0891B2"/>
 </a>
 
